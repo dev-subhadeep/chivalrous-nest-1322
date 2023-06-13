@@ -1,0 +1,50 @@
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    height: 100%;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#logo {
+    height: 50px;
+}
+#menu {
+    display: flex;
+    gap: 20px;
+}
+.menu-item {
+    text-decoration: none;
+    color: #373838;
+}
+.menu-item:hover {
+    color: #00A3FF;
+}
+.menu-item:active {
+    color: #00A3FF;
+    font-weight: 400;
+}
+.menu-item > li {
+    list-style: none;
+}
+
+/* Homepage */
+
+.hero {
+    background-image: url('/assets/patterns.png');
+    height: 200px;
+}
