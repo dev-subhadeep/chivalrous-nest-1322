@@ -6,10 +6,26 @@
     box-sizing: border-box;
 }
 img {
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 body {
     font-family: 'Nunito', sans-serif;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+section p {
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
 /* Header */
@@ -19,6 +35,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: (0,0,0);
+    position: relative;
 }
 #logo {
     height: 50px;
@@ -45,6 +63,234 @@ header {
 /* Homepage */
 
 .hero {
+    position: relative;
     background-image: url('/assets/patterns.png');
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.hero a {
+    text-decoration: none;
+    background: #00A3FF;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    width: fit-content;
+}
+
+.desktop_header_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop_header_images > img{
     height: 200px;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Offers section */
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.offer-card {
+    max-width: 350px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px 2px #e1e1e1;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.offer-card > h3 {
+    background: linear-gradient(120deg, #0aa3ff, #6cc6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.offer-card > .icon {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(120deg, #0aa3ff, #93d1f7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-card > .icon > i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Map section */
+
+#locations {
+    text-align: center;
+}
+
+
+/* Featured Section */
+
+.featured-cards {
+    display: flex;
+    justify-content: center;
+    /* align-items: stretch; */
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.featured-card {
+    max-width: 350px;
+    box-shadow: 0px 2px 10px 2px #e1e1e1;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    /* gap: 20px; */
+    overflow: hidden;
+}
+.featured-card > h3 {
+    margin-top: 20px;
+}
+.featured-card > img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.featured-card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.featured-card > div > div {
+    text-align: left;
+}
+.featured-card > div > div > p {
+    font-size: 0.6rem;
+    text-align: left;
+    margin: 0;
+}
+.featured-card > div > div > h4 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 0;
+}
+.featured-card a {
+    text-decoration: none;
+    background: #00A3FF;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+/* Contact section */
+
+form {
+    width: 70%;
+    margin: 100px auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+form input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #c4c4c4;
+    margin: 50px 0;
+    padding: 10px 0;
+    width: 100%;
+}
+form div > div {
+    width: 100%;
+}
+form > div {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+
+
+form > div:last-child {
+    align-items: center;
+    justify-content: center;
+}
+
+form button {
+    border: none;
+    text-decoration: none;
+    background: #00A3FF;
+    border-radius: 20px;
+    padding: 10px 50px;
+    color: #fff;
+}
+
+/* Footer section  */
+
+footer {
+    display: flex;
+    padding: 100px 50px;
+    justify-content: space-between;
+    background: linear-gradient(60deg, #DFF3FE, #fff);
+}
+footer > div:first-child p {
+    max-width: 400px;
+}
+footer > div:last-child {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+footer a {
+    color: #00A3FF;
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .offer-cards,
+    .featured-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        display: block;
+        height: fit-content;
+    }
+
+    .desktop_header_images {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

@@ -55,7 +55,7 @@ nav.append(menu)
 
 header.append(logo,nav)
 
-document.querySelector('body').prepend(header)
+// document.querySelector('.hero').prepend(header)
 
 
 
