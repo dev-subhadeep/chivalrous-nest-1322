@@ -11,7 +11,7 @@ menuItems = [
 
     {
         linkText: 'Hotels',
-        linkUrl: '/'
+        linkUrl: '/hotels.html'
     },
 
     {
