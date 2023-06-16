@@ -26,7 +26,7 @@ menuItems = [
 
     {
         linkText: 'Contact Us',
-        linkUrl: '/'
+        linkUrl: '#contact'
     }
 ]
 

@@ -5,6 +5,7 @@ container = document.querySelector('#results-container')
 
 modal = document.querySelector('dialog')
 
+bookingsData = JSON.parse(localStorage.getItem('bookings')) || []
 
 function Display(data) {
     container.innerHTML = ""
@@ -19,11 +20,19 @@ function Display(data) {
             detailWrapper = document.createElement('div')
                 hotel_name = document.createElement('h2')
                 hotel_name.id = 'name'
+                city = document.createElement('p')
+                city.innerText = el.city
+                ratings = document.createElement('p')
+                    for (i=0; i < el.ratings; i++){
+                        star = document.createElement('i')
+                        star.className = 'fa-solid fa-star'
+                        ratings.append(star)
+                    }
                 price = document.createElement('h3')
                 price.id = 'price'
                 book = document.createElement('button')
                 book.className = 'bookBtn'
-                detailWrapper.append(hotel_name,price,book)
+                detailWrapper.append(hotel_name,city,ratings,price,book)
                 
 
         //adding the data
@@ -96,8 +105,12 @@ function populateModal(hotel) {
             difference = outDate - inDate
 
             days = difference/(24*3600*1000)
-
-            console.log(days)
+            hotel.daysBooked = days
+            hotel.bookedRooms = hotelRooms
+            bookingsData.push(hotel)
+            localStorage.setItem('bookings',JSON.stringify(bookingsData))
+            window.open('/thankyou.html')
+            // console.log(days)
         })
 
         cancelBtn = document.createElement('button')
@@ -151,6 +164,9 @@ function populateModal(hotel) {
 
         price.append(curr,amt,unit)
 
+        city = document.createElement('p')
+        city.innerText = hotel.city
+
         ratings = document.createElement('p')
         ratings.className = 'ratings'
 
@@ -160,7 +176,7 @@ function populateModal(hotel) {
             ratings.append(star)
         }
 
-    description.append(hotelName,price,ratings)
+    description.append(hotelName,price,city,ratings)
 
             
     modal.innerHTML = null
