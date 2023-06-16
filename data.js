@@ -1,247 +1,172 @@
-// hotels = [
-//     {
-//         name:
-//         location:
-//         price:
-//         category:
-//         images: []
-//     }
-// ]
-
-// packages = [
-//     {
-//         name:
-//         location:
-//         price:
-//         category:
-//         duration:
-//         images: []
-//     }
-// ]
-
-
-hotels = [
+const getRandomCity = () => {
+    var cities = [
+      "Paris, France",
+      "Tokyo, Japan",
+      "New York City, USA",
+      "London, UK",
+      "Sydney, Australia",
+      // Add more cities as needed
+    ];
+  
+    return cities[Math.floor(Math.random() * cities.length)];
+  };
+  
+  const hotels = [
     {
-        "name": "Enchanted Haven",
-        "location": "Mystic Valley",
-        "price": 9000,
-        "category": "family",
-        "images": [
-            "https://example.com/enchanted_haven_image1.jpg",
-            "https://example.com/enchanted_haven_image2.jpg",
-            "https://example.com/enchanted_haven_image3.jpg"
-        ]
+      name: "Enchanted Haven",
+      city: getRandomCity(),
+      price: 9000,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
     {
-        "name": "Luminous Oasis",
-        "location": "Sunset Beach",
-        "price": 12000,
-        "category": "premium",
-        "images": [
-            "https://example.com/luminous_oasis_image1.jpg",
-            "https://example.com/luminous_oasis_image2.jpg"
-        ]
+      name: "Luminous Oasis",
+      city: getRandomCity(),
+      price: 12000,
+      ratings: 5,
+      images: [
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/premium-photo/3d-rendering-luxury-modern-bedroom-suite-hotel_105762-569.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/loft-luxury-living-room-with-bookshelf-near-dining-table_105762-1796.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/dining-table-with-chairs-tableware_140725-7823.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/premium-photo/3d-rendering-beautiful-luxury-bedroom-suite-hotel-with-tv-working-table_105762-845.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Whispering Pines",
-        "location": "Serenity Valley",
-        "price": 7000,
-        "category": "solo",
-        "images": [
-            "https://example.com/whispering_pines_image1.jpg",
-            "https://example.com/whispering_pines_image2.jpg",
-            "https://example.com/whispering_pines_image3.jpg"
-        ]
+      name: "Serenity Retreat",
+      city: getRandomCity(),
+      price: 6000,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Celestial Retreat",
-        "location": "Starlight City",
-        "price": 15000,
-        "category": "premium",
-        "images": [
-            "https://example.com/celestial_retreat_image1.jpg",
-            "https://example.com/celestial_retreat_image2.jpg"
-        ]
+      name: "Tranquility Inn",
+      city: getRandomCity(),
+      price: 8000,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Tranquil Haven",
-        "location": "Peaceful Meadows",
-        "price": 8000,
-        "category": "family",
-        "images": [
-            "https://example.com/tranquil_haven_image1.jpg",
-            "https://example.com/tranquil_haven_image2.jpg"
-        ]
+      name: "Sunrise Paradise",
+      city: getRandomCity(),
+      price: 10000,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Radiant Shores",
-        "location": "Blissful Coast",
-        "price": 10000,
-        "category": "premium",
-        "images": [
-            "https://example.com/radiant_shores_image1.jpg",
-            "https://example.com/radiant_shores_image2.jpg",
-            "https://example.com/radiant_shores_image3.jpg"
-        ]
+      name: "Paradise Retreat",
+      city: getRandomCity(),
+      price: 8000,
+      ratings: 3,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Whimsical Lodge",
-        "location": "Enchanted Forest",
-        "price": 6000,
-        "category": "solo",
-        "images": [
-            "https://example.com/whimsical_lodge_image1.jpg",
-            "https://example.com/whimsical_lodge_image2.jpg",
-            "https://example.com/whimsical_lodge_image3.jpg"
-        ]
+      name: "Golden Sands",
+      city: getRandomCity(),
+      price: 9500,
+      ratings: 5,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Majestic Peaks",
-        "location": "Snowy Mountains",
-        "price": 11000,
-        "category": "family",
-        "images": [
-            "https://example.com/majestic_peaks_image1.jpg",
-            "https://example.com/majestic_peaks_image2.jpg"
-        ]
+      name: "Royal Palace",
+      city: getRandomCity(),
+      price: 7000,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Serene Mirage",
-        "location": "Desert Oasis",
-        "price": 7500,
-        "category": "premium",
-        "images": [
-            "https://example.com/serene_mirage_image1.jpg",
-            "https://example.com/serene_mirage_image2.jpg",
-            "https://example.com/serene_mirage_image3.jpg"
-        ]
+      name: "Moonlight Lodge",
+      city: getRandomCity(),
+      price: 8500,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Dreamy Harbor",
-        "location": "Seaside Village",
-        "price": 9500,
-        "category": "family",
-        "images": [
-            "https://example.com/dreamy_harbor_image1.jpg",
-            "https://example.com/dreamy_harbor_image2.jpg"
-        ]
+      name: "Ocean View Resort",
+      city: getRandomCity(),
+      price: 9500,
+      ratings: 5,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     },
+    // Add more hotel objects
     {
-        "name": "Blissful Haven",
-        "location": "Tranquil Meadows",
-        "price": 8500,
-        "category": "solo",
-        "images": [
-            "https://example.com/blissful_haven_image1.jpg",
-            "https://example.com/blissful_haven_image2.jpg",
-            "https://example.com/blissful_haven_image3.jpg"
-        ]
-    },
-    {
-        "name": "Ethereal Gardens",
-        "location": "Enchanted Valley",
-        "price": 13000,
-        "category": "premium",
-        "images": [
-            "https://example.com/ethereal_gardens_image1.jpg",
-            "https://example.com/ethereal_gardens_image2.jpg"
-        ]
-    },
-    {
-        "name": "Tranquility Bay",
-        "location": "Secluded Coast",
-        "price": 8500,
-        "category": "family",
-        "images": [
-            "https://example.com/tranquility_bay_image1.jpg",
-            "https://example.com/tranquility_bay_image2.jpg",
-            "https://example.com/tranquility_bay_image3.jpg"
-        ]
-    },
-    {
-        "name": "Enchanted Villa",
-        "location": "Magic Garden",
-        "price": 9500,
-        "category": "solo",
-        "images": [
-            "https://example.com/enchanted_villa_image1.jpg",
-            "https://example.com/enchanted_villa_image2.jpg",
-            "https://example.com/enchanted_villa_image3.jpg"
-        ]
-    },
-    {
-        "name": "Golden Oasis",
-        "location": "Sun-kissed Dunes",
-        "price": 10000,
-        "category": "premium",
-        "images": [
-            "https://example.com/golden_oasis_image1.jpg",
-            "https://example.com/golden_oasis_image2.jpg"
-        ]
-    },
-    {
-        "name": "Whispering Waves",
-        "location": "Secluded Beach",
-        "price": 7000,
-        "category": "family",
-        "images": [
-            "https://example.com/whispering_waves_image1.jpg",
-            "https://example.com/whispering_waves_image2.jpg",
-            "https://example.com/whispering_waves_image3.jpg"
-        ]
-    },
-    {
-        "name": "Serenity Lodge",
-        "location": "Tranquil Forest",
-        "price": 8000,
-        "category": "solo",
-        "images": [
-            "https://example.com/serenity_lodge_image1.jpg",
-            "https://example.com/serenity_lodge_image2.jpg"
-        ]
-    },
-    {
-        "name": "Eternal Retreat",
-        "location": "Secluded Mountain",
-        "price": 14000,
-        "category": "premium",
-        "images": [
-            "https://example.com/eternal_retreat_image1.jpg",
-            "https://example.com/eternal_retreat_image2.jpg",
-            "https://example.com/eternal_retreat_image3.jpg"
-        ]
-    },
-    {
-        "name": "Harmony Haven",
-        "location": "Peaceful Meadows",
-        "price": 7500,
-        "category": "family",
-        "images": [
-            "https://example.com/harmony_haven_image1.jpg",
-            "https://example.com/harmony_haven_image2.jpg"
-        ]
-    },
-    {
-        "name": "Tranquil Oasis",
-        "location": "Zen Garden",
-        "price": 9000,
-        "category": "solo",
-        "images": [
-            "https://example.com/tranquil_oasis_image1.jpg",
-            "https://example.com/tranquil_oasis_image2.jpg",
-            "https://example.com/tranquil_oasis_image3.jpg"
-        ]
-    },
-    {
-        "name": "Mystic Manor",
-        "location": "Enchanted Woods",
-        "price": 11000,
-        "category": "premium",
-        "images": [
-            "https://example.com/mystic_manor_image1.jpg",
-            "https://example.com/mystic_manor_image2.jpg"
-        ]
+      name: "Tropical Paradise",
+      city: getRandomCity(),
+      price: 7500,
+      ratings: 4,
+      images: [
+        "https://img.freepik.com/free-photo/bangkok-thailand-august-12-2016-beautiful-luxury-living-room_1203-2867.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/luxury-bedroom-hotel_1150-10836.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/cozy-studio-apartment-with-bedroom-living-space_1262-12323.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/3d-rendering-modern-luxury-bedroom-suite-bathroom_105762-1936.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais",
+        "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?size=626&ext=jpg&ga=GA1.1.817686206.1686925766&semt=ais"
+      ]
     }
-]
-
-localStorage.setItem('hotels',JSON.stringify(hotels))
+  ];
+  
+  checkData = localStorage.getItem('hotels')
+  if (checkData === null) {
+    localStorage.setItem('hotels',JSON.stringify(hotels))
+  }

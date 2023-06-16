@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0be756c9ff.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Gypsyfy - Hotels</title>
 </head>
@@ -15,15 +16,50 @@
                     <img src="/assets/hotels/87428762.jpg" alt="">
                 </div>
                 <div>
-                    <h1>Hotel California</h1>
-                    <h3><span class="price">12000</span>/day<h3>
-                    <a class="bookBtn" href="hotel-details.html">Book</a>
+                    <h2 id="name">Hotel California</h2>
+                    <h3 id="price"><h3>
+                    <button class="bookBtn" href="hotel-details.html">Book</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <dialog id="hotel-details">
+        <div id="booking">
+            <input type="text" onfocus="(this.type='date')" name="checkin" id="checkin" placeholder="Select Check-in Date">
+            <input type="text" onfocus="(this.type='date')" name="checkout" id="checkout" placeholder="Select Check-out Date">
+            <div><button id="dec">-</button><span id="roomcount">2 </span><button id="inc">+</button><span> rooms</span></div>
+            <button>Book</button>
+            <button onclick="document.getElementById('hotel-details').close()">Cancel</button>
+        </div>
+        <div id="gallery">
+            <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+            <div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="hotel-details">
+    
+    
+    
+            
+            <div>
+                <h2>Hotel California</h2>
+                <h3><span>Rs</span><span>8280</span><span>/room</span></h3>
+                <p>Bali</p>
+                <p class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            </div>
+        </div>
+    </dialog>
 
     <script src="js/hotels.js"></script>
+    <script src="js/hotel-details.js"></script>
 </body>
 </html>
