@@ -6,7 +6,7 @@ menuItems = [
 
     {
         linkText: 'About Us',
-        linkUrl: '/'
+        linkUrl: '/about.html'
     },
 
     {

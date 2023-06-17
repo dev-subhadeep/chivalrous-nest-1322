@@ -9,6 +9,9 @@
     margin-bottom: 50px;
 }
 
+.bookBtn {
+    background: linear-gradient(120deg, #0aa3ff, #93d1f7);
+}
 
 
 h1 {
