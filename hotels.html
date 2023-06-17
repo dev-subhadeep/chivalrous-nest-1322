@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/0be756c9ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hotels.css">
+    <title>Gypsyfy - Hotels</title>
+</head>
+<body>
+
+    <div id="hotels-header">
+        <h1>Hotels</h1>
+        <!-- <p><span id="hotels_count">0</span> hotels found.</p> -->
+        <div id="selection-bar">
+            <div id="filter">
+                <select name="" id="location">
+                    <option value="">Location</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="Tokyo, Japan">Tokyo</option>
+                    <option value="New York City, USA">New York</option>
+                    <option value="London, UK">London</option>
+                    <option value="Sydney, Australia">Sydney</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+    
+                <select name="" id="category">
+                    <option value="">Category</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="holidays">Holidays</option>
+                </select>
+    
+                <select name="" id="rating">
+                    <option value="0">Rating</option>
+                    <option value="4">4 and above</option>
+                    <option value="3">3 and above</option>
+                    <option value="2">2 and above</option>
+                </select>
+
+                <button id="sendFilteredData">Book</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="results">
+        
+        <div id="results-container">
+            <div class="hotel">
+                <div class="hotel-image">
+                    <img src="/assets/hotels/87428762.jpg" alt="">
+                </div>
+                <div>
+                    <h2 id="name">Hotel California</h2>
+                    <p>Kolkata</p>
+                    <p>5 star</p>
+                    <h3>Rs 14000/day<h3>
+                    <button class="bookBtn" href="hotel-details.html">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="hotel-details">
+        <div id="booking">
+            <input type="text" onfocus="(this.type='date')" name="checkin" id="checkin" placeholder="Select Check-in Date">
+            <input type="text" onfocus="(this.type='date')" name="checkout" id="checkout" placeholder="Select Check-out Date">
+            <div><button id="dec">-</button><span id="roomcount">2 </span><button id="inc">+</button><span> rooms</span></div>
+            <button>Book</button>
+            <button onclick="document.getElementById('hotel-details').close()">Cancel</button>
+        </div>
+        <div id="gallery">
+            <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+            <div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+                <div><img src="/assets/hotels/87428762.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="hotel-details">
+    
+    
+    
+            
+            <div>
+                <h2>Hotel California</h2>
+                <h3><span>Rs</span><span>8280</span><span>/room</span></h3>
+                <p>Bali</p>
+                <p class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+            </div>
+        </div>
+    </dialog>
+    <script src="js/search.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/hotel-details.js"></script>
+
+    <script src = 'components/header/header.js'></script>
+    <script>
+        document.querySelector('body').prepend(header)
+    </script>
+
+<footer>
+    <div>
+        <h2>Gypsyfy</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla suscipit deleniti recusandae maxime voluptas accusantium cumque quo incidunt molestiae.</p>
+    </div>
+    <div>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+    </div>
+</footer>
+</body>
+</html>

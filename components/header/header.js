@@ -11,28 +11,30 @@ menuItems = [
 
     {
         linkText: 'Hotels',
-        linkUrl: '/'
-    },
-
-    {
-        linkText: 'Flights',
-        linkUrl: '/'
+        linkUrl: '/hotels.html'
     },
 
     {
         linkText: 'Holidays',
-        linkUrl: '/'
+        linkUrl: '/holidays.html'
     },
 
     {
         linkText: 'Contact Us',
-        linkUrl: '/'
+        linkUrl: '/#contact'
     }
 ]
 
 //creating the elements
 
 header = document.createElement('header')
+menuBtn = document.createElement('button')
+menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>'
+menuBtn.id = 'menu-button'
+menuBtn.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu')
+    menu.style = 'transform: translateX(0)'
+})
 logo = document.createElement('div')
 logoImg = document.createElement('img')
 logo.append(logoImg)
@@ -53,7 +55,7 @@ for (i of menuItems) {
 
 nav.append(menu)
 
-header.append(logo,nav)
+header.append(logo,nav,menuBtn)
 
 // document.querySelector('.hero').prepend(header)
 
@@ -63,3 +65,9 @@ header.append(logo,nav)
 
 logo.id = 'logo'
 menu.id = 'menu'
+
+document.getElementById('close-side-menu').addEventListener('click', () => {
+    sidemenu = document.getElementById('mobile-menu')
+    sidemenu.style = 'transform: translateX(-500px)'
+})
+
