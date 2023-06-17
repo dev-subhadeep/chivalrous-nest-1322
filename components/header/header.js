@@ -16,12 +16,12 @@ menuItems = [
 
     {
         linkText: 'Holidays',
-        linkUrl: '/'
+        linkUrl: '/holidays.html'
     },
 
     {
         linkText: 'Contact Us',
-        linkUrl: '#contact'
+        linkUrl: '/#contact'
     }
 ]
 

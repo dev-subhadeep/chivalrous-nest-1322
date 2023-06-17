@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/holidays.css">
+    <script src="https://kit.fontawesome.com/0be756c9ff.js" crossorigin="anonymous"></script>
+
+    <title>Gypsyfy - Holidays</title>
+</head>
+<body>
+
+
+    <div id="hotels-header">
+        <h1>Holidays</h1>
+        <!-- <p><span id="hotels_count">0</span> hotels found.</p> -->
+        <div id="selection-bar">
+            <div id="filter">
+                <select name="" id="location">
+                    <option value="">Location</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="Tokyo, Japan">Tokyo</option>
+                    <option value="New York City, USA">New York</option>
+                    <option value="London, UK">London</option>
+                    <option value="Sydney, Australia">Sydney</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+    
+                <select name="" id="category">
+                    <option value="">Category</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="holidays">Holidays</option>
+                </select>
+    
+                <select name="" id="rating">
+                    <option value="0">Rating</option>
+                    <option value="4">4 and above</option>
+                    <option value="3">3 and above</option>
+                    <option value="2">2 and above</option>
+                </select>
+
+                <button id="sendFilteredData">Book</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultswrapper">
+        <div id="holidays">
+            
+
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <div>
+            <h2>Gypsyfy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla suscipit deleniti recusandae maxime voluptas accusantium cumque quo incidunt molestiae.</p>
+        </div>
+        <div>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="/js/holidays.js"></script>
+    <script>
+        document.getElementById('resultswrapper').append(container)
+    </script>
+    <script src = 'components/header/header.js'></script>
+    <script>
+        document.querySelector('body').prepend(header)
+    </script>
+</body>
+</html>

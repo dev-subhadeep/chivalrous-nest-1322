@@ -57,9 +57,9 @@ function Display(data) {
 }
 
 
-function hotelCount(data) {
-    document.querySelector('#hotels_count').innerText = data.length
-}
+// function hotelCount(data) {
+//     document.querySelector('#hotels_count').innerText = data.length
+// }
 
 function populateModal(hotel) {
     form = document.createElement('div')

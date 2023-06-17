@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    
     <title>Thank you!</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+        .wrapper {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 98vh;
+        }
+    </style>
 </head>
 <body>
     
-    <h1>Thank you for booking with us. Your total booking amount is Rs<span id="amount"></span>. Have a wonderful trip!</h1>
+   <div class="wrapper">
+        <h1>Thank you for booking with us. Your total booking amount is Rs<span id="amount"></span>. Have a wonderful trip!</h1>
 
-    <a href="/">Return to homepage</a>
+        <a href="/">Return to homepage</a>
+   </div>
 
 
     <script>
