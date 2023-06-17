@@ -183,5 +183,25 @@ function populateModal(hotel) {
     modal.append(gallery,description,form)
 }
 
-Display(hotelData)
+const urlParams = new URLSearchParams(window.location.search);
+const searchLocation = urlParams.get('location')
+const minRating = urlParams.get('minrating')
+// console.log(searchLocation, minRating)
+
+if (searchLocation===null && minRating===null) {
+    Display(hotelData)
+}
+
+else {
+    hotelDataFiltered = hotelData
+    hotelDataFiltered = hotelDataFiltered.filter(el => {
+        if (el.ratings > Number(minRating) && el.city === searchLocation)
+        return el
+    })
+    console.log(hotelDataFiltered)
+    Display(hotelDataFiltered)
+}
+
+
+
 hotelCount(hotelData)

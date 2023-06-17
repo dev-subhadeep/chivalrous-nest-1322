@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0be756c9ff.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hotels.css">
     <title>Gypsyfy - Hotels</title>
 </head>
 <body>
+
+    <div id="hotels-header">
+        <h1>Hotels</h1>
+        <p><span id="hotels_count">0</span> hotels found.</p>
+        <div id="selection-bar">
+            <div id="filter">
+                <select name="" id="location">
+                    <option value="">Location</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="Tokyo, Japan">Tokyo</option>
+                    <option value="New York City, USA">New York</option>
+                    <option value="London, UK">London</option>
+                    <option value="Sydney, Australia">Sydney</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+    
+                <select name="" id="category">
+                    <option value="">Category</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="holidays">Holidays</option>
+                </select>
+    
+                <select name="" id="rating">
+                    <option value="0">Rating</option>
+                    <option value="4">4 and above</option>
+                    <option value="3">3 and above</option>
+                    <option value="2">2 and above</option>
+                </select>
+
+                <button id="sendFilteredData">Book</button>
+            </div>
+        </div>
+    </div>
+    
     <div id="results">
-        <h1><span id="hotels_count">0</span> hotels found.</h1>
+        
         <div id="results-container">
             <div class="hotel">
                 <div class="hotel-image">
@@ -60,8 +97,15 @@
             </div>
         </div>
     </dialog>
-
+    <script src="js/search.js"></script>
     <script src="js/hotels.js"></script>
     <script src="js/hotel-details.js"></script>
+
+    <script src = 'components/header/header.js'></script>
+    <script>
+        document.querySelector('body').prepend(header)
+    </script>
+
+    
 </body>
 </html>

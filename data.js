@@ -166,7 +166,102 @@ const getRandomCity = () => {
     }
   ];
   
-  checkData = localStorage.getItem('hotels')
+  checkHotelsData = localStorage.getItem('hotels')
   if (checkData === null) {
     localStorage.setItem('hotels',JSON.stringify(hotels))
+  }
+
+  
+
+  const holidays = [
+    {
+      title: 'Marvelous Madrid',
+      duration: 5,
+      price: 1500,
+      image: 'https://example.com/madrid.jpg',
+      location: 'Madrid'
+    },
+    {
+      title: 'Beautiful Bali',
+      duration: 7,
+      price: 2000,
+      image: 'https://example.com/bali.jpg',
+      location: 'Bali'
+    },
+    {
+      title: 'Serene Sydney',
+      duration: 4,
+      price: 1800,
+      image: 'https://example.com/sydney.jpg',
+      location: 'Sydney'
+    },
+    {
+      title: 'Charming Cape Town',
+      duration: 6,
+      price: 2500,
+      image: 'https://example.com/capetown.jpg',
+      location: 'Cape Town'
+    },
+    {
+      title: 'Gorgeous Goa',
+      duration: 3,
+      price: 1200,
+      image: 'https://example.com/goa.jpg',
+      location: 'Goa'
+    },
+    {
+      title: 'Enchanting Edinburgh',
+      duration: 2,
+      price: 800,
+      image: 'https://example.com/edinburgh.jpg',
+      location: 'Edinburgh'
+    },
+    {
+      title: 'Amazing Amsterdam',
+      duration: 7,
+      price: 2200,
+      image: 'https://example.com/amsterdam.jpg',
+      location: 'Amsterdam'
+    },
+    {
+      title: 'Blissful Bangkok',
+      duration: 5,
+      price: 1700,
+      image: 'https://example.com/bangkok.jpg',
+      location: 'Bangkok'
+    },
+    {
+      title: 'Romantic Rome',
+      duration: 4,
+      price: 1900,
+      image: 'https://example.com/rome.jpg',
+      location: 'Rome'
+    },
+    {
+      title: 'Dazzling Dubai',
+      duration: 7,
+      price: 3000,
+      image: 'https://example.com/dubai.jpg',
+      location: 'Dubai'
+    },
+    {
+      title: 'Magical Maldives',
+      duration: 7,
+      price: 3000,
+      image: 'https://example.com/dubai.jpg',
+      location: 'Maldives'
+    },
+    {
+      title: 'Royal Rajasthan',
+      duration: 7,
+      price: 3000,
+      image: 'https://example.com/dubai.jpg',
+      location: 'Rajashthan'
+    }
+  ];
+  
+
+  checkHolidaysData = localStorage.getItem('holidays')
+  if (checkData === null) {
+    localStorage.setItem('holidays',JSON.stringify(holidays))
   }

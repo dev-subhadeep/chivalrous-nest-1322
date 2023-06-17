@@ -32,10 +32,35 @@
 
         <!-- Search section -->
 
-        <div id="filter">
-            <select name="" id="location">
-                
-            </select>
+        <div id="selection-bar">
+            <div id="filter">
+                <select name="" id="location">
+                    <option value="">Location</option>
+                    <option value="Paris, France">Paris</option>
+                    <option value="Tokyo, Japan">Tokyo</option>
+                    <option value="New York City, USA">New York</option>
+                    <option value="London, UK">London</option>
+                    <option value="Sydney, Australia">Sydney</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+    
+                <select name="" id="category">
+                    <option value="">Category</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="holidays">Holidays</option>
+                </select>
+    
+                <select name="" id="rating">
+                    <option value="0">Rating</option>
+                    <option value="4">4 and above</option>
+                    <option value="3">3 and above</option>
+                    <option value="2">2 and above</option>
+                </select>
+
+                <button id="sendFilteredData">Book</button>
+            </div>
         </div>
 
         <!-- Offers section -->
@@ -86,39 +111,45 @@
 
         <div class="featured-cards">
             <div  class="featured-card">
-                <img src="/assets/maldives.jpeg" alt="">
-                <h3>Magical Maldives</h3>
-                <p>7N/8D</p>
-                <div>
+                <div class="featured-image"><img src="/assets/maldives.jpeg" alt=""></div>
+                <div class="details">
+                    <h3>Magical Maldives</h3>
+                    <p>7N/8D</p>
                     <div>
-                        <p>Starting from</p>
-                        <h4>$220 / person</h4>
+                        <div>
+                            <p>Starting from</p>
+                            <h4>$220 / person</h4>
+                        </div>
+                        <div><a href="">Book</a></div>
                     </div>
-                    <div><a href="">Book</a></div>
                 </div>
             </div>
             <div  class="featured-card">
-                <img src="/assets/dubai.jpg" alt="">
-                <h3>Dazzling Dubai</h3>
-                <p>7N/8D</p>
-                <div>
+                <div class="featured-image"><img src="/assets/dubai.jpg" alt=""></div>
+                <div class="details">
+                    <h3>Dazzling Dubai</h3>
+                    <p>7N/8D</p>
                     <div>
-                        <p>Starting from</p>
-                        <h4>$220 / person</h4>
+                        <div>
+                            <p>Starting from</p>
+                            <h4>$220 / person</h4>
+                        </div>
+                        <div><a href="">Book</a></div>
                     </div>
-                    <div><a href="">Book</a></div>
                 </div>
             </div>
             <div  class="featured-card">
-                <img src="/assets/camel.png.jpg" alt="">
-                <h3>Royal Rajasthan</h3>
-                <p>7N/8D</p>
-                <div>
+                <div class="featured-image"><img src="/assets/camel.png.jpg" alt=""></div>
+                <div class="details">
+                    <h3>Royal Rajasthan</h3>
+                    <p>7N/8D</p>
                     <div>
-                        <p>Starting from</p>
-                        <h4>$220 / person</h4>
+                        <div>
+                            <p>Starting from</p>
+                            <h4>$220 / person</h4>
+                        </div>
+                        <div><a href="">Book</a></div>
                     </div>
-                    <div><a href="">Book</a></div>
                 </div>
             </div>
         </div>
@@ -156,6 +187,30 @@
         </div>
     </footer>
 
+    <div id="mobile-menu">
+
+        <button id="close-side-menu"><i class="fa-solid fa-xmark"></i></button>
+            
+    
+        <ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/hotels.html">
+                <li>Hotels</li>
+            </a>
+            <a href="/holidays.html">
+                <li>Holidays</li>
+            </a>
+            <a href="#footer">
+                <li>About</li>
+            </a>
+            <a href="#contact">
+                <li>Contact Us</li>
+            </a>
+        </ul>
+    </div>
+
 
     <!-- Scripts are placed here -->
 
@@ -163,6 +218,7 @@
     <script>
         document.querySelector('#top').prepend(header)
     </script>
+    <script src="js/search.js"></script>
     <script src="data.js"></script>
 </body>
 </html>
