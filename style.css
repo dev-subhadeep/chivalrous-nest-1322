@@ -63,7 +63,7 @@ header {
 /* Homepage */
 
 #top {
-    /* background-image: url('/assets/patterns.png'); */
+    background-image: url('/assets/patterns.png');
 }
 
 .hero {
@@ -250,6 +250,11 @@ header {
 }
 
 /* Contact section */
+
+#contact > img {
+    width: 100%;
+}
+
 
 form {
     width: 70%;
