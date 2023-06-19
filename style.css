@@ -63,7 +63,7 @@ header {
 /* Homepage */
 
 #top {
-    background-image: url('/assets/patterns.png');
+    /* background-image: url('/assets/patterns.png'); */
 }
 
 .hero {
@@ -351,11 +351,15 @@ footer i {
         position: static;
     }
     nav {
-        display: none;
+        /* display: none; */
     }
     .featured-card {
-        width: 85%;
+        /* width: 85%; */
     }
+    form > div {
+        flex-direction: column;
+    }
+
 }
 
 
