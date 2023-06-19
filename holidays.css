@@ -11,7 +11,7 @@
 }
 
 .holiday {
-    border: 1px solid #c4c4c4;
+    box-shadow: 0px 2px 10px 2px #e1e1e1;
     border-radius: 10px;
     overflow: hidden;
 }
